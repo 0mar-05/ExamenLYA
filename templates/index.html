@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzle Lineal - API y Front</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <main class="page-shell">
+        <section class="panel card">
+            <div class="hero">
+                <h1>Puzzle Lineal 1D</h1>
+                <p>Introduce el estado inicial y la solución. Se ejecutan las tres búsquedas al mismo tiempo y se muestran juntas.</p>
+            </div>
+
+            <form id="solveForm" class="form-grid">
+                <div class="panel-row">
+                    <div class="panel-group">
+                        <p class="note">Al enviar, se ejecutan las tres búsquedas al mismo tiempo y se muestran sus resultados en este apartado.</p>
+                    </div>
+
+                    <div class="state-columns">
+                        <div class="state-panel">
+                            <h2>Estado inicial</h2>
+                            <div class="grid-labels">
+                                <span>1ro</span>
+                                <span>2do</span>
+                                <span>3ro</span>
+                                <span>4to</span>
+                            </div>
+                            <div class="grid-input" id="initialGrid"></div>
+                        </div>
+
+                        <div class="state-panel">
+                            <h2>Objetivo</h2>
+                            <div class="grid-labels">
+                                <span>1ro</span>
+                                <span>2do</span>
+                                <span>3ro</span>
+                                <span>4to</span>
+                            </div>
+                            <div class="grid-input" id="goalGrid"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="button">Resolver todos</button>
+            </form>
+
+            <section id="result" class="result-card hidden">
+                <h2>Salida del algoritmo</h2>
+                <div class="result-meta" id="resultMeta"></div>
+                <pre class="result-full" id="resultFull"></pre>
+                <div id="resultSteps" class="result-steps"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
